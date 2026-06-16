@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>量化思維財務顧問 | 專業投資策略</title>
+    <style>
+        /* --- 基礎設定 --- */
+        :root {
+            --primary-bg: #ffffff;
+            --secondary-bg: #f8f9fa;
+            --text-dark: #1a365d;
+            --text-light: #4a5568;
+            --accent-color: #2b6cb0;
+            --accent-hover: #2c5282;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, '微軟正黑體', sans-serif;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* --- 導覽列 --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: var(--primary-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            margin-left: 30px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* --- 主視覺區 (Hero) --- */
+        #hero {
+            text-align: center;
+            padding: 120px 5% 100px;
+            background: linear-gradient(to bottom, #ffffff, #f1f5f9);
+        }
+
+        #hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        #hero p {
+            font-size: 20px;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* --- 核心理念 (Concepts) --- */
+        #concepts {
+            padding: 80px 5%;
+            background-color: var(--primary-bg);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 60px;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--secondary-bg);
+            padding: 40px 30px;
+            border-radius: 10px;
+            flex: 1;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        .card p {
+            color: var(--text-light);
+            font-size: 16px;
+        }
+
+        /* --- 實戰解析 (Portfolio) --- */
+        #portfolio {
+            padding: 80px 5%;
+            background-color: var(--secondary-bg);
+            text-align: center;
+        }
+
+        .portfolio-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .portfolio-item {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            width: 45%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .portfolio-item h4 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* --- 聯絡我們 (Contact) --- */
+        #contact {
+            padding: 80px 5%;
+            background-color: var(--primary-bg);
+            text-align: center;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #cbd5e0;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        form .btn {
+            border: none;
+            cursor: pointer;
+        }
+
+        /* --- 頁尾 --- */
+        footer {
+            background-color: var(--text-dark);
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* --- RWD 響應式設計 --- */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* 手機版暫時隱藏選單，保持簡潔 */
+            }
+            
+            #hero h1 {
+                font-size: 36px;
+            }
+            
+            .card-container, .portfolio-grid {
+                flex-direction: column;
+            }
+            
+            .portfolio-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <nav>
+        <div class="logo">QuantInvest</div>
+        <div class="nav-links">
+            <a href="#concepts">核心理念</a>
+            <a href="#portfolio">實戰解析</a>
+            <a href="#contact">預約諮詢</a>
+        </div>
+    </nav>
+
+    <!-- 主視覺區 -->
+    <header id="hero">
+        <h1>以量化思維，打造穩健資產</h1>
+        <p>摒除情緒干擾，運用科學化的風險控管與嚴謹的財報健檢，為您量身規劃長期且具備正期望值的投資策略。</p>
+        <a href="#contact" class="btn">免費預約諮詢</a>
+    </header>
+
+    <!-- 核心理念區 -->
+    <section id="concepts">
+        <h2 class="section-title">三大核心投資邏輯</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>EV 期望值模型</h3>
+                <p>將機率與潛在報酬量化，不盲目猜測市場漲跌，專注於尋找長期具備正期望值的交易機會。</p>
+            </div>
+            <div class="card">
+                <h3>Kelly 資金控管</h3>
+                <p>運用凱利公式計算最佳曝險比例，在追求資產最大化增長的同時，嚴格防範破產風險。</p>
+            </div>
+            <div class="card">
+                <h3>基本面財報健檢</h3>
+                <p>拆解資產負債表與損益表，深入分析營業利益率與負債比率計算，找出具備真實護城河的優質企業。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 實戰解析區 -->
+    <section id="portfolio">
+        <h2 class="section-title">標的配置策略</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <h4>0050 大盤核心配置</h4>
+                <p>獲取整體市場的合理報酬，作為投資組合中最堅實的防禦底座，分散單一產業風險。</p>
+            </div>
+            <div class="portfolio-item">
+                <h4>2330 成長動能衛星</h4>
+                <p>透過財報護城河篩選，配置具備全球定價權與技術領先優勢的企業，拉升整體資產期望值。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡表單區 -->
+    <section id="contact">
+        <h2 class="section-title">開始您的財務健檢</h2>
+        <form action="#" method="POST">
+            <input type="text" placeholder="您的姓名" required>
+            <input type="email" placeholder="電子郵件" required>
+            <textarea placeholder="請簡述您目前的資金配置概況或想諮詢的問題..."></textarea>
+            <button type="submit" class="btn">發送訊息</button>
+        </form>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer>
+        <p>&copy; 2026 QuantInvest 財務顧問. All rights reserved. (期末作業展示專用)</p>
+    </footer>
+
+</body>
+</html>
